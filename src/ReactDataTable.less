@@ -1,0 +1,65 @@
+.react-data-table {
+  width: 100%;
+
+  .rdt-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .rdt-filter-select {
+      width: fit-content;
+    }
+
+    .rdt-search-input {
+      width: 100px;
+    }
+
+    .rdt-pagination-select {
+      width: fit-content;
+    }
+  }
+
+  .rdt-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+
+    th,
+    td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      cursor: pointer;
+      background-color: #f4f4f4;
+    }
+
+    th:hover {
+      background-color: #ddd;
+    }
+  }
+
+  .rdt-pagination-nav {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+
+    button {
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      background-color: white;
+    }
+
+    button.active {
+      background-color: #007bff;
+      color: white;
+    }
+
+    button:disabled {
+      background-color: #f4f4f4;
+      cursor: not-allowed;
+    }
+  }
+}
