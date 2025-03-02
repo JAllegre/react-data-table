@@ -115,17 +115,22 @@ const ReactDataTable: React.FC<ReactDataTableProps> = ({
         {options.title && <h3>{options.title}</h3>}
 
         {selectFilters.map((filter) => (
-          <select
-            key={filter.colName}
-            className="rdt-filter-select form-control"
-            onChange={handleFiltersChange(filter)}
-          >
-            {filter.options.map((opt) => (
-              <option key={String(opt.value)} value={String(opt.value)}>
-                {opt.label}
-              </option>
-            ))}
-          </select>
+          <div className="rdt-filter">
+            <span className="material-symbols-outlined rdt-filter-icon">
+              filter_alt
+            </span>
+            <select
+              key={filter.colName}
+              className="rdt-filter-select form-control"
+              onChange={handleFiltersChange(filter)}
+            >
+              {filter.options.map((opt) => (
+                <option key={String(opt.value)} value={String(opt.value)}>
+                  {opt.label}
+                </option>
+              ))}
+            </select>
+          </div>
         ))}
         <input
           className="rdt-search-input form-control"

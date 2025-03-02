@@ -5,8 +5,20 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    .rdt-filter-select {
-      width: fit-content;
+    .rdt-filter {
+      position: relative;
+
+      .rdt-filter-icon {
+        position: absolute;
+        top: 8px;
+        left: 5px;
+        font-size: 20px;
+      }
+
+      .rdt-filter-select {
+        width: fit-content;
+        padding-left: 20px;
+      }
     }
 
     .rdt-search-input {
